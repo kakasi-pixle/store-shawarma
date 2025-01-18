@@ -93,3 +93,18 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     alert('اسم المستخدم أو كلمة المرور غير صحيحة');
   }
 });
+
+document.getElementById('show-login').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('register').style.display = 'none';
+  document.getElementById('login').style.display = 'block';
+});
+
+document.getElementById('sidebar-toggle').addEventListener('click', function() {
+  const sidebar = document.getElementById('sidebar');
+  if (sidebar.style.left === '-250px') {
+    sidebar.style.left = '0';
+  } else {
+    sidebar.style.left = '-250px';
+  }
+});
