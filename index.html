@@ -5,40 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منصة البنك الافتراضي</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
-
-  <!-- خلفية تأثيرات الثلج -->
-  <div id="particles-js"></div>
 
   <!-- الشريط الجانبي المنزلق -->
   <div id="sidebar" class="sidebar">
     <button id="sidebar-toggle" class="toggle-btn">&#9776;</button>
     <ul>
-      <li><a href="#login" id="login-link">تسجيل الدخول</a></li>
+      <li><a href="#" id="login-link">تسجيل الدخول</a></li>
       <li><a href="#register" id="register-link">إنشاء حساب</a></li>
       <li><a href="#dashboard" id="dashboard-link">الصفحة الرئيسية</a></li>
       <li><a href="#store">الاستور</a></li>
       <li><a href="#mining">التنقيب</a></li>
-      <li><a href="#admin" id="admin-link">إدارة الحسابات</a></li>
+      <li><a href="#admin">إدارة الحسابات</a></li>
       <li><a href="#betting-room">قاعة المراهنات</a></li>
     </ul>
   </div>
-
-  <!-- صفحة تسجيل الدخول (مخفية في البداية) -->
-  <section id="login" class="section" style="display: none;">
-    <h2>تسجيل الدخول</h2>
-    <div class="card">
-      <form id="loginForm">
-        <label for="login-username">اسم المستخدم:</label>
-        <input type="text" id="login-username" required><br>
-        <label for="login-password">كلمة المرور:</label>
-        <input type="password" id="login-password" required><br>
-        <button type="submit">تسجيل الدخول</button>
-      </form>
-    </div>
-  </section>
 
   <!-- صفحة إنشاء الحساب -->
   <section id="register" class="section">
@@ -56,29 +38,32 @@
         <button type="submit">إنشاء الحساب</button>
       </form>
     </div>
-    <p>لديك حساب بالفعل؟ <a href="#login" id="show-login">اضغط هنا لتسجيل الدخول</a></p>
+    <p>لديك حساب بالفعل؟ <a href="#" id="show-login">اضغط هنا لتسجيل الدخول</a></p>
+  </section>
+
+  <!-- صفحة تسجيل الدخول -->
+  <section id="login" class="section" style="display:none;">
+    <h2>تسجيل الدخول</h2>
+    <div class="card">
+      <form id="loginForm">
+        <label for="login-username">اسم المستخدم:</label>
+        <input type="text" id="login-username" required><br>
+        <label for="login-password">كلمة المرور:</label>
+        <input type="password" id="login-password" required><br>
+        <button type="submit">تسجيل الدخول</button>
+      </form>
+    </div>
   </section>
 
   <!-- الصفحة الرئيسية -->
-  <section id="dashboard" class="section" style="display: none;">
+  <section id="dashboard" class="section" style="display:none;">
     <h2>الصفحة الرئيسية</h2>
     <div class="card">
       <h3>حسابك</h3>
       <div class="card-content">
         <p>الاسم: <span id="user-name">غير مسجل</span></p>
         <p>الرصيد: <span id="user-balance">0 عملة</span></p>
-        <button id="add-funds-btn">إضافة رصيد</button>
-        <button id="transfer-funds-btn">تحويل الأموال</button>
-        <button id="withdraw-funds-btn">سحب الأموال</button>
       </div>
-    </div>
-
-    <!-- إدارة الحسابات (للأدمن فقط) -->
-    <div id="admin-controls" class="card" style="display: none;">
-      <h3>إدارة الحسابات</h3>
-      <button id="ban-user-btn">حظر مستخدم</button>
-      <button id="unban-user-btn">رفع الحظر عن مستخدم</button>
-      <button id="delete-account-btn">حذف حساب</button>
     </div>
   </section>
 
