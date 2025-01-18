@@ -75,18 +75,26 @@ body {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
 .card button:hover {
   background-color: #45a049;
+  transform: scale(1.05);
 }
 
-.card-content {
-  font-size: 18px;
+.card button:active {
+  transform: scale(0.98);
 }
 
-h2 {
-  text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
+/* تأثير النصوص */
+h2, h3 {
+  font-size: 32px;
+  color: #ecf0f1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+h2:hover {
+  color: #1abc9c;
 }
