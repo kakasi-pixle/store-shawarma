@@ -1,8 +1,34 @@
 let users = JSON.parse(localStorage.getItem('users')) || [];
 let currentUser = null;
 
+document.getElementById('show-register').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('register').style.display = 'block';
+});
+
 document.getElementById('show-login').addEventListener('click', function(event) {
   event.preventDefault();
+  document.getElementById('register').style.display = 'none';
+  document.getElementById('login').style.display = 'block';
+});
+
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const username = document.getElementById('register-username').value;
+  const email = document.getElementById('register-email').value;
+  const password = document.getElementById('register-password').value;
+
+  // التحقق إذا كان اسم المستخدم موجود بالفعل
+  if (users.some(user => user.username === username)) {
+    alert("اسم المستخدم موجود بالفعل، يرجى تغييره");
+    return;
+  }
+
+  const newUser = { username, email, password, balance: 100 };
+  users.push(newUser);
+  localStorage.setItem('users', JSON.stringify(users));
+  alert('تم إنشاء الحساب بنجاح!');
   document.getElementById('register').style.display = 'none';
   document.getElementById('login').style.display = 'block';
 });
@@ -23,25 +49,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   } else {
     alert('اسم المستخدم أو كلمة المرور غير صحيحة');
   }
-});
-
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const username = document.getElementById('register-username').value;
-  const email = document.getElementById('register-email').value;
-  const password = document.getElementById('register-password').value;
-
-  if (users.some(user => user.username === username)) {
-    alert("اسم المستخدم موجود بالفعل, يرجى تغييره");
-    return;
-  }
-
-  const newUser = { username, email, password, balance: 100 };
-  users.push(newUser);
-  localStorage.setItem('users', JSON.stringify(users));
-  alert('تم إنشاء الحساب بنجاح!');
-  document.getElementById('register').style.display = 'none';
-  document.getElementById('login').style.display = 'block';
 });
 
 document.getElementById('sidebar-toggle').addEventListener('click', function() {
