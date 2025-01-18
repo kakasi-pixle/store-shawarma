@@ -22,27 +22,8 @@
     </ul>
   </div>
 
-  <!-- صفحة إنشاء الحساب -->
-  <section id="register" class="section">
-    <h2>إنشاء حساب جديد</h2>
-    <div class="card">
-      <form id="registerForm">
-        <label for="register-username">اسم المستخدم:</label>
-        <input type="text" id="register-username" placeholder="أدخل اسم المستخدم" required><br>
-        <label for="register-email">البريد الإلكتروني:</label>
-        <input type="email" id="register-email" placeholder="أدخل بريدك الإلكتروني" required><br>
-        <label for="register-password">كلمة المرور:</label>
-        <input type="password" id="register-password" placeholder="أدخل كلمة المرور" required><br>
-        <label for="register-code">كود التسجيل (اختياري):</label>
-        <input type="text" id="register-code" placeholder="أدخل كود التسجيل"><br>
-        <button type="submit">إنشاء الحساب</button>
-      </form>
-    </div>
-    <p>لديك حساب بالفعل؟ <a href="#" id="show-login">اضغط هنا لتسجيل الدخول</a></p>
-  </section>
-
   <!-- صفحة تسجيل الدخول -->
-  <section id="login" class="section" style="display:none;">
+  <section id="login" class="section">
     <h2>تسجيل الدخول</h2>
     <div class="card">
       <form id="loginForm">
@@ -53,6 +34,24 @@
         <button type="submit">تسجيل الدخول</button>
       </form>
     </div>
+    <p>لديك حساب بالفعل؟ <a href="#" id="show-register">اضغط هنا لإنشاء حساب</a></p>
+  </section>
+
+  <!-- صفحة إنشاء الحساب -->
+  <section id="register" class="section" style="display:none;">
+    <h2>إنشاء حساب جديد</h2>
+    <div class="card">
+      <form id="registerForm">
+        <label for="register-username">اسم المستخدم:</label>
+        <input type="text" id="register-username" placeholder="أدخل اسم المستخدم" required><br>
+        <label for="register-email">البريد الإلكتروني:</label>
+        <input type="email" id="register-email" placeholder="أدخل بريدك الإلكتروني" required><br>
+        <label for="register-password">كلمة المرور:</label>
+        <input type="password" id="register-password" placeholder="أدخل كلمة المرور" required><br>
+        <button type="submit">إنشاء الحساب</button>
+      </form>
+    </div>
+    <p>لديك حساب بالفعل؟ <a href="#" id="show-login">اضغط هنا لتسجيل الدخول</a></p>
   </section>
 
   <!-- الصفحة الرئيسية -->
